@@ -1,0 +1,4 @@
+com\springOAuth2\config\WebSecurityConfig.class
+com\springOAuth2\config\ResourceServerConfig.class
+com\springOAuth2\SpringOAuth2Application.class
+com\springOAuth2\config\AuthorizationServerConfig.class
