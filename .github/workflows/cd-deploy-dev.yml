@@ -62,6 +62,5 @@ jobs:
           manifests: |
             kubernetes/deployment.yml
           images: |
-            sriharipriya/microservices-poc:${{ github.run_number }}
+            lathgr/spring-oauth:${{ github.run_number }}
             
- 
