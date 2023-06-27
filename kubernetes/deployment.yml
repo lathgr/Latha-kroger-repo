@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: deployment-service
   labels:
-    app: microservices-poc
+    app: spring-oauth
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: microservices-poc
+      app: spring-oauth
   template:
     metadata:
       labels:
-        app: microservices-poc
+        app: spring-oauth
     spec:
       containers:
-        - name: microservices-poc
-          image: sriharipriya/microservices-poc:${{ github.run_number }}
+        - name: spring-oauth
+          image: lathgr/spring-oauth:${{ github.run_number }}
 
           ports: 
             - containerPort: 8080
@@ -26,11 +26,11 @@ kind: Service
 metadata:
   name: microservices-poc-loadbalancer-service
   labels:
-    app: microservices-poc
+    app: spring-oauth
 spec:
   type: LoadBalancer
   selector:
-    app: microservices-poc
+    app: spring-oauth
   ports:
     - port: 8080
       targetPort: 8080
